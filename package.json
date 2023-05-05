@@ -10,7 +10,7 @@
     "type": "github",
     "url": "https://github.com/sponsors/Borewit"
   },
-  "scripts": {
+  "scripts2": {
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts test/**/*.js test/**/*.js.map",
     "compile-src": "tsc -p lib",
     "compile-test": "tsc -p test",
