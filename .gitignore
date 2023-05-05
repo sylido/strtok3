@@ -1,7 +1,7 @@
 *.iml
 node_modules
-lib/**/*.js
-lib/**/*.js.map
+# lib/**/*.js
+# lib/**/*.js.map
 lib/**/*.d.ts
 test/**/*.js
 test/**/*.js.map
