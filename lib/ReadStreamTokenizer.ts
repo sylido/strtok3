@@ -1,5 +1,5 @@
 import { AbstractTokenizer } from './AbstractTokenizer.js';
-import { EndOfStreamError, StreamReader } from 'peek-readable';
+import { EndOfStreamError, StreamReader } from 'peek-readable/lib/index.js';
 import { Readable } from 'node:stream';
 import { IFileInfo, IReadChunkOptions } from './types.js';
 
