@@ -1,3 +1,5 @@
+# forked from https://github.com/Borewit/strtok3 in order to be published in npm
+
 ![Node.js CI](https://github.com/Borewit/strtok3/workflows/Node.js%20CI/badge.svg)
 [![NPM version](https://badge.fury.io/js/strtok3.svg)](https://npmjs.org/package/strtok3)
 [![npm downloads](http://img.shields.io/npm/dm/strtok3.svg)](https://npmcharts.com/compare/strtok3,token-types?start=1200&interval=30)
@@ -61,7 +63,7 @@ Returns, via a promise, a [*tokenizer*](#tokenizer) which can be used to parse a
 ```js
 import * as strtok3 from 'strtok3';
 import * as Token from 'token-types';
-    
+
 (async () => {
 
   const tokenizer = await strtok3.fromFile("somefile.bin");
@@ -70,7 +72,7 @@ import * as Token from 'token-types';
     console.log(`My number: ${myNumber}`);
   } finally {
     tokenizer.close(); // Close the file
-  } 
+  }
 })();
 
 ```
@@ -108,7 +110,7 @@ Returns a [*tokenizer*](#tokenizer) which can be used to parse the provided buff
 
 ```js
 import * as strtok3 from 'strtok3';
-    
+
 const tokenizer = strtok3.fromBuffer(buffer);
 
 tokenizer.readToken(Token.UINT8).then(myUint8Number => {
@@ -135,7 +137,7 @@ Optional attribute describing the file information, see [IFileInfo](#IFileInfo)
 Pointer to the current position in the [*tokenizer*](#tokenizer) stream.
 If a *position* is provided to a *read* or *peek* method, is should be, at least, equal or greater than this value.
 
-### Tokenizer methods 
+### Tokenizer methods
 
 There are two kind of methods:
 1.   *read* methods: used to read a *token* of [Buffer](https://nodejs.org/api/buffer.html) from the [*tokenizer*](#tokenizer). The position of the *tokenizer-stream* will advance with the size of the token.
@@ -202,7 +204,7 @@ Return value `Promise<number>` Promise with number peeked from the *tokenizer-st
 
 #### Method `tokenizer.ignore()`
 
-Advanse the offset pointer with the number of bytes provided. 
+Advanse the offset pointer with the number of bytes provided.
 `ignore(length)`
 
 | Parameter  | Type   | Description                                                          |
@@ -236,14 +238,14 @@ File information interface which describes the underlying file, each attribute i
 
 | Attribute | Type    | Description                                                                                       |
 |-----------|---------|---------------------------------------------------------------------------------------------------|
-| size      | number  | File size in bytes                                                                                | 
+| size      | number  | File size in bytes                                                                                |
 | mimeType  | number  | [MIME-type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of file. |
 | path      | number  | File path                                                                                         |
 | url       | boolean | File URL                                                                                          |
 
 ## Token
 
-The *token* is basically a description what to read form the [*tokenizer-stream*](#tokenizer). 
+The *token* is basically a description what to read form the [*tokenizer-stream*](#tokenizer).
 A basic set of *token types* can be found here: [*token-types*](https://github.com/Borewit/token-types).
 
 A token is something which implements the following interface:
@@ -288,7 +290,7 @@ import { ReadableWebToNodeStream } from 'readable-web-to-node-stream';
   const response = await fetch(url);
   const readableWebStream = response.body; // Web-API readable stream
   const nodeStream = new ReadableWebToNodeStream(readableWebStream); // convert to Node.js readable stream
-  
+
   const tokenizer = strtok3core.fromStream(nodeStream); // And we now have tokenizer in a web environment
 })();
 ```

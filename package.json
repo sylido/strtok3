@@ -1,14 +1,14 @@
 {
-  "name": "strtok3",
-  "version": "7.0.0",
+  "name": "sylido-strtok3",
+  "version": "1.0.0",
   "description": "A promise based streaming tokenizer",
   "author": {
-    "name": "Borewit",
-    "url": "https://github.com/Borewit"
+    "name": "Danail Gabenski",
+    "url": "https://github.com/sylido"
   },
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/Borewit"
+    "url": "https://github.com/sylido/strtok3"
   },
   "scripts2": {
     "clean": "del-cli lib/**/*.js lib/**/*.js.map lib/**/*.d.ts test/**/*.js test/**/*.js.map",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Borewit/strtok3.git"
+    "url": "https://github.com/sylido/strtok3"
   },
   "license": "MIT",
   "type": "module",
@@ -47,7 +47,7 @@
     "lib/**/*.d.ts"
   ],
   "bugs": {
-    "url": "https://github.com/Borewit/strtok3/issues"
+    "url": "https://github.com/sylido/strtok3/issues"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
